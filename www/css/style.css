@@ -1,0 +1,73 @@
+:root{
+    --font-family-sans: sans-serif;
+    --font-family-serif: Georgia;
+    --copy: "1em";
+    --primary:  #E43542;
+    --secondary:  #111;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family-sans);
+    font-size: var(--copy);
+
+    line-height: 1.5;
+}
+.header { text-align: center; padding: 20px}
+.main { padding: 30px; width: 100%; }
+
+.page {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+
+    font-family: var(--font-family-sans);
+    font-size: 1.5em;
+    color: var(--secondary)
+}
+
+.page h1, .page h2 {
+    font-size: 1em;
+    /* font-style: italic; */
+    font-weight: normal;
+    color: var(--primary);
+}
+
+blockquote {
+    color: var(--primary);
+    /* font-style: italic; */
+    font-family: var(--font-family-serif);
+    font-size: 1.2em;
+}
+
+.comic-nav { 
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex; justify-content: space-between; 
+    position: sticky; bottom: 0;
+    padding: 20px 0;
+    background: linear-gradient(#fff0, 20%, #fff);
+}
+.comic-nav svg { height: 20px; fill: var(--primary) }
+.comic { margin: 20px auto; text-align: center; height: 700px;}
+    .comic img { max-width: 260px; width: 100% }
+.nav {text-align: center; display: flex; flex-direction: column;} 
+.nav-element { display: inline-block; padding: 10px; text-decoration: none; color: var(--secondary)}
+
+@media screen and (min-width:700px){
+    .comic {height: 364px;}
+    .comic-nav { top: -200px; position: relative; background: none; }
+    .nav {text-align: center; flex-direction: row; justify-content: center;} 
+}
+
+.transition-fade {
+    transition: 0.4s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}

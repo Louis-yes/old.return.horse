@@ -1,0 +1,36 @@
+{
+  "name": "return.horse",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "custom static site builder for return.horse webcomic",
+  "main": "index.js",
+  "watch" : {
+    "build":{
+      "patterns": [
+        "templates",
+        "content/js",
+        "content/css",
+        "components",
+        "index.js"
+      ],
+      "extensions": "js,css"
+    }
+  },
+  "scripts": {
+    "build": "node index.js",
+    "serve": "browser-sync start -server -f index.html",
+    "watch": "npm-watch build"
+  },
+  "repository": "https://github.com/Louis-yes/return.horse.git",
+  "author": "Louis <luegraham@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "markdown": "^0.5.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.11.0"
+  }
+}
