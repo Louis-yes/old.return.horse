@@ -13,12 +13,12 @@
         "components",
         "index.js"
       ],
-      "extensions": "js,css"
+      "extensions": "js,css,md"
     }
   },
   "scripts": {
     "build": "node index.js",
-    "serve": "browser-sync start -server -f index.html",
+    "serve": "cd www && browser-sync start -server -f index.html",
     "watch": "npm-watch build"
   },
   "repository": "https://github.com/Louis-yes/return.horse.git",

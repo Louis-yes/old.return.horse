@@ -1,3 +1,12 @@
+/*
+TODO
+
+[ ] add archive page
+[ ] add random script
+[ ] write site meta
+[ ] make tool that works in ronin or somthing
+
+*/
 import fs from "fs-extra"
 import markdown from "markdown"
 
