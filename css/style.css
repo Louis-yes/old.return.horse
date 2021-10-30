@@ -54,7 +54,7 @@ blockquote {
 .comic-nav svg { height: 20px; fill: var(--primary) }
 .comic { margin: 20px auto; text-align: center; height: 700px;}
     .comic img { max-width: 260px; width: 100% }
-.nav {text-align: center; display: flex; flex-direction: column;} 
+.nav {text-align: center; display: flex; flex-direction: column; margin: 0 0 100px;} 
 .nav-element { display: inline-block; padding: 10px; text-decoration: none; color: var(--secondary)}
 
 @media screen and (min-width:700px){
@@ -69,5 +69,32 @@ blockquote {
 }
 
 html.is-animating .transition-fade {
+    opacity: 0;
+}
+
+.transition-comic {
+    transform: translateY(0);
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: .1s;
+    translate: 0 0;
+}
+
+.transition-comic:nth-child(1){
+    transition-delay: .2s;
+}
+
+html.is-animating .transition-comic {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+.transition-header {
+    transform: translateY(0);
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    translate: 0 0;
+}
+
+html.is-animating .transition-header {
+    transform: translateY(-10px);
     opacity: 0;
 }
