@@ -1,0 +1,23 @@
+{
+    "type" : "comic",
+    "date" : "2021-09-25",
+    "title" : "Faith starts in the desert",
+    "path" : "theology",
+    "desc" : "a cowboy eventually wonders",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "comic_panel_01.png",
+                "alt" : "_defaut_panel_one",
+                "text" : "what if I die",
+                "hovertext" : "what if God dies and I'm a horse"
+            },
+            {
+                "img" : "comic_panel_02.png",
+                "alt" : "_default_panel_two",
+                "text" : "what if I die and God's not a horse",
+                "hovertext" : "what if God dies and I'm a horse"
+            }
+        ]
+    }
+}
