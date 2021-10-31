@@ -36,7 +36,7 @@ export default function comicDisplay(comic, comics){
         </header>
         <div id="comic" class="comic">
             ${comic.data.panels.map(p => {
-                return `<img class=" transition-comic" src="/${comic.path}/${p.img}" alt="${p.alt}, the text reads ${p.text}" title="${p.hovertext}"/>` }
+                return `<img class=" transition-comic" src="${comic.path}/${p.img}" alt="${p.alt}, the text reads ${p.text}" title="${p.hovertext}"/>` }
             ).join("")}
         </div>
         <nav id="comic-nav" class="comic-nav" aria-label="comic navigation">
