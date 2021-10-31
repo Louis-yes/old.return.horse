@@ -35,6 +35,15 @@ body {
     color: var(--primary);
 }
 
+.page .archive {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    color: var(--primary)
+}
+.page a { color: var(--primary);}
+.page a:hover { color: var(--secondary); }
+
 blockquote {
     color: var(--primary);
     /* font-style: italic; */
