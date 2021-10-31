@@ -15,7 +15,7 @@ export default function templatePage(site, page) {
     <head>
         <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
         ${meta({title: page.meta.title + " | " + site.title})}
-        ${styles()}
+        ${styles(site)}
     </head>
         <body>
             <main class="transition-fade">
@@ -23,8 +23,8 @@ export default function templatePage(site, page) {
                     ${page.content}
                 </div>
             </main>
-            ${navMenu()}
-            ${Scripts()}
+            ${navMenu(site)}
+            ${Scripts(site)}
             </body>
     </html>
     `

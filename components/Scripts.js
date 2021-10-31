@@ -1,5 +1,5 @@
-export default function Scripts(){
+export default function Scripts(site){
     return `
-        <script src="/js/scripts.js"></script>
+        <script src="${site.url}/js/scripts.js"></script>
     `
 }

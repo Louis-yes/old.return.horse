@@ -9,13 +9,13 @@ export default function(site, comic, comics){
     <html lang="en">
     <head>
         ${meta({title: site.title + " | " + comic.title})}
-        ${styles()}
+        ${styles(site)}
         <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     </head>
     <body>
-        ${comicDisplay(comic, comics)}
-        ${navMenu()}
+        ${comicDisplay(comic, comics, site)}
+        ${navMenu(site)}
     </body>
-    ${Scripts()}
+    ${Scripts(site)}
     </html>`
 }

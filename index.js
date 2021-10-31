@@ -13,10 +13,13 @@ import markdown from "markdown"
 import comicTemplate from "./templates/templateComics.js"
 import pageTemplate from "./templates/templatePage.js"
 
-build()
+const env = process.argv[2] == "--production" ? "prod" : "dev"
+build(env)
 
-function build(){
+function build(env){
     let site = getSiteInfo()
+    site.url = env === "prod" ? site.productionUrl : site.devUrl
+
     let comics = makeComicsList()
 
     // build html and populate directories

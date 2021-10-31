@@ -1,7 +1,7 @@
-export default function styles(){
+export default function styles(site){
     return `
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="${site.url}/css/normalize.css">
+        <link rel="stylesheet" href="${site.url}/css/style.css">
         <style>
 
         </style>
