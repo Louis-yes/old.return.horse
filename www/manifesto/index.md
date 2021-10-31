@@ -17,5 +17,3 @@ A cowboy rides out in the morning on his horse, and returns in the evening. A fu
 - To apply constraints to the format, to generate creativity within the constraints and to lower the hurdles to a finished project.
 
 - I think there is a type of humour that comes out of repetition, and that gag cartoons have the necessary components to draw it out well. Whether or not *I* can do this is yet to be seen.
-
-*[back](..)*
