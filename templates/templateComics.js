@@ -16,6 +16,6 @@ export default function(site, comic, comics){
         ${comicDisplay(comic, comics, site)}
         ${navMenu(site)}
     </body>
-    ${Scripts(site)}
+    ${Scripts(site, comics)}
     </html>`
 }

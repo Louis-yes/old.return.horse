@@ -35,6 +35,15 @@ body {
     color: var(--primary);
 }
 
+.page .archive {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    color: var(--primary)
+}
+.page a { color: var(--primary);}
+.page a:hover { color: var(--secondary); }
+
 blockquote {
     color: var(--primary);
     /* font-style: italic; */
@@ -53,7 +62,8 @@ blockquote {
 }
 .comic-nav svg { height: 20px; fill: var(--primary) }
 .comic { margin: 20px auto; text-align: center; height: 700px;}
-    .comic img { max-width: 260px; width: 100% }
+    .comic img { max-width: 260px; width: 100%; opacity: 0; transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);}
+    .comic img.loaded { opacity: 1; }
 .nav {text-align: center; display: flex; flex-direction: column; margin: 0 0 100px;} 
 .nav-element { display: inline-block; padding: 10px; text-decoration: none; color: var(--secondary)}
 
