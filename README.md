@@ -11,7 +11,8 @@ Comics are kept in the `/content/posts` dir, as comic.json and also any other as
 They're built with the `/templates/templateComic` template.  
 
 Comic.json looks like  
-`{  
+```js
+{  
     "date" : "dd-mm-yyyy", // date to be published  
     "title" : "title", // title of comic  
     "path" : "path", // directory or url path to use (should be the same as the directory name in posts)  
@@ -26,9 +27,10 @@ Comic.json looks like
             }  
         ]  
     }  
-}`  
+}
+```
 
-A blank template for comic.json can be found at /theforge/comicTemplate.json
+A blank template for comic.json can be found at `/theforge/comicTemplate.json`
 `/theforge` is where I'm keeping all the materials for the actual creation of a comic.
 Currently it's an illustrator, I'd like to make a tool that just does it wih text input and can automatically create the `/posts/path` directory with the `comic.json` and images, but that's still in development
 
