@@ -3,7 +3,7 @@ TODO
 [ ] write site meta
 [ ] make tool that works in ronin or somthing
 [ ] only build new comics
-[ ] deploy script
+[ ] deploy script - git subtree push --prefix www origin gh-pages
 
 */
 import fs from "fs-extra"
@@ -95,7 +95,7 @@ function  makeComicsList () {
             }
         }
     }).filter(Boolean).sort((a,b) => { 
-        return new Date(a.date).getTime() - new Date(b.date).getTime()
+        return new Date(b.date).getTime() - new Date(a.date).getTime()
     })
     return comis
 }
