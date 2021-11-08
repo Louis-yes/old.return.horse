@@ -1,10 +1,9 @@
 /*
 TODO
-[x] make readme
-[x] add archive page
-[x] add random script
 [ ] write site meta
 [ ] make tool that works in ronin or somthing
+[ ] only build new comics
+[ ] deploy script
 
 */
 import fs from "fs-extra"
@@ -15,7 +14,10 @@ import pageTemplate from "./templates/templatePage.js"
 import templateArchive from "./templates/templateArchive.js"
 
 const env = process.argv[2] == "--production" ? "prod" : "dev"
+const buildPath = env === "prod" ? "./www" : "./dev"
+
 build(env)
+
 
 function build(env){
     let site = getSiteInfo()
@@ -31,12 +33,12 @@ function build(env){
         // build archive
     buildArchivePage(site,comics, templateArchive)
         // home page
-    fs.writeFile('./www/index.html', comicTemplate(site, comics[0], comics), () => { console.log(`created www/index.html`) })
+    fs.writeFile(`${buildPath}/index.html`, comicTemplate(site, comics[0], comics), () => { console.log(`created ${buildPath}/index.html`) })
     // move assets over
         // js
-    fs.copySync(`./content/js`, `./www/js`, {overwrite: true})
+    fs.copySync(`./content/js`, `${buildPath}/js`, {overwrite: true})
         // css
-    fs.copySync(`./content/css`, `./www/css`, {overwrite: true})
+    fs.copySync(`./content/css`, `${buildPath}/css`, {overwrite: true})
 
 }
 
@@ -59,8 +61,8 @@ function buildSitePages(site, template, comics){
         }
     }).filter(Boolean)
     pages.forEach(pp => {
-        fs.copySync(`${pagesPath}/${pp.name}`, `./www/${pp.name}`, {overwrite: true})
-        fs.writeFileSync(`./www/${pp.name}/index.html`, pp.html)
+        fs.copySync(`${pagesPath}/${pp.name}`, `${buildPath}/${pp.name}`, {overwrite: true})
+        fs.writeFileSync(`${buildPath}/${pp.name}/index.html`, pp.html)
     })
 }
 
@@ -92,14 +94,16 @@ function  makeComicsList () {
                 return JSON.parse(fs.readFileSync(path, { encoding: "utf8" }))
             }
         }
-    }).filter(Boolean).sort((a,b) => { return Date(a.date) > Date(b.date)})
+    }).filter(Boolean).sort((a,b) => { 
+        return new Date(a.date).getTime() - new Date(b.date).getTime()
+    })
     return comis
 }
 
 function buildComicPages(site, comics, template) {
     comics.forEach(comic => {
         let page = template(site, comic, comics)
-        let path = `./www/${comic.path}`
+        let path = `${buildPath}/${comic.path}`
         fs.copySync(`./content/posts/${comic.path}`, path, {overwrite: true})
         fs.writeFile(path + "/index.html", page, () => { console.log(`created ${path}`) })
     });
@@ -107,7 +111,7 @@ function buildComicPages(site, comics, template) {
 
 function buildArchivePage(site, comics, template) {
     let page = template(site, comics)
-    let path = `./www/archive`
+    let path = `${buildPath}/archive`
     if(!fs.existsSync(path)){ fs.mkdirSync(path) }
     fs.writeFile(path + "/index.html", page, () => { console.log(`created ${path}`) })
 }
