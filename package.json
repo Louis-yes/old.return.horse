@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "node index.js",
-    "serve": "cd www && browser-sync start -server -f index.html",
+    "serve": "cd dev && browser-sync start -server -f index.html",
     "watch": "npm-watch build"
   },
   "repository": "https://github.com/Louis-yes/return.horse.git",
