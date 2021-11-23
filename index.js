@@ -1,10 +1,9 @@
 /*
 TODO
-
-[ ] add archive page
-[ ] add random script
 [ ] write site meta
 [ ] make tool that works in ronin or somthing
+[ ] only build new comics
+[ ] deploy script - git subtree push --prefix www origin gh-pages
 
 */
 import fs from "fs-extra"
@@ -12,26 +11,34 @@ import markdown from "markdown"
 
 import comicTemplate from "./templates/templateComics.js"
 import pageTemplate from "./templates/templatePage.js"
+import templateArchive from "./templates/templateArchive.js"
 
-build()
+const env = process.argv[2] == "--production" ? "prod" : "dev"
+const buildPath = env === "prod" ? "./www" : "./dev"
 
-function build(){
+build(env)
+
+
+function build(env){
     let site = getSiteInfo()
+    site.url = env === "prod" ? site.prodUrl : site.devUrl
+
     let comics = makeComicsList()
 
     // build html and populate directories
         // comic pages
     buildComicPages(site, comics, comicTemplate)
         // pages
-    buildSitePages(site, pageTemplate)
+    buildSitePages(site, pageTemplate, comics)
+        // build archive
+    buildArchivePage(site,comics, templateArchive)
         // home page
-    fs.writeFile('./www/index.html', comicTemplate(site, comics[0], comics), () => { console.log(`created www/index.html`) })
-
+    fs.writeFile(`${buildPath}/index.html`, comicTemplate(site, comics[0], comics), () => { console.log(`created ${buildPath}/index.html`) })
     // move assets over
         // js
-    fs.copySync(`./content/js`, `./www/js`, {overwrite: true})
+    fs.copySync(`./content/js`, `${buildPath}/js`, {overwrite: true})
         // css
-    fs.copySync(`./content/css`, `./www/css`, {overwrite: true})
+    fs.copySync(`./content/css`, `${buildPath}/css`, {overwrite: true})
 
 }
 
@@ -39,7 +46,7 @@ function getSiteInfo () {
     return JSON.parse(fs.readFileSync("site.json"))
 }
 
-function buildSitePages(site, template){
+function buildSitePages(site, template, comics){
     const pagesPath = './content/pages'
     const dir = fs.readdirSync(pagesPath, {withFileTypes: true})
     const pages = dir.map(ff => {
@@ -48,18 +55,18 @@ function buildSitePages(site, template){
             let name = ff.name
             if(fs.existsSync(path)){
                 let md = fs.readFileSync(path, {encoding: "utf8"})
-                let page = makePage(site, md, template)
+                let page = makePage(site, md, template, comics)
                 return {html: page, name: name}
             }
         }
     }).filter(Boolean)
     pages.forEach(pp => {
-        fs.copySync(`${pagesPath}/${pp.name}`, `./www/${pp.name}`, {overwrite: true})
-        fs.writeFileSync(`./www/${pp.name}/index.html`, pp.html)
+        fs.copySync(`${pagesPath}/${pp.name}`, `${buildPath}/${pp.name}`, {overwrite: true})
+        fs.writeFileSync(`${buildPath}/${pp.name}/index.html`, pp.html)
     })
 }
 
-function makePage(site, md, template){
+function makePage(site, md, template, comics){
     let content = ""
     let meta = {}
 
@@ -74,7 +81,7 @@ function makePage(site, md, template){
         content = markdown.markdown.toHTML(frontMatterSplit[1])
     }
 
-    return template(site, {meta: meta, content: content})
+    return template(site, {meta: meta, content: content}, comics)
 }
 
 function  makeComicsList () {
@@ -87,15 +94,24 @@ function  makeComicsList () {
                 return JSON.parse(fs.readFileSync(path, { encoding: "utf8" }))
             }
         }
-    }).filter(Boolean).sort((a,b) => { return Date(a.date) > Date(b.date)})
+    }).filter(Boolean).sort((a,b) => { 
+        return new Date(b.date).getTime() - new Date(a.date).getTime()
+    })
     return comis
 }
 
 function buildComicPages(site, comics, template) {
     comics.forEach(comic => {
         let page = template(site, comic, comics)
-        let path = `./www/${comic.path}`
+        let path = `${buildPath}/${comic.path}`
         fs.copySync(`./content/posts/${comic.path}`, path, {overwrite: true})
         fs.writeFile(path + "/index.html", page, () => { console.log(`created ${path}`) })
     });
+}
+
+function buildArchivePage(site, comics, template) {
+    let page = template(site, comics)
+    let path = `${buildPath}/archive`
+    if(!fs.existsSync(path)){ fs.mkdirSync(path) }
+    fs.writeFile(path + "/index.html", page, () => { console.log(`created ${path}`) })
 }

@@ -1,5 +1,7 @@
-export default function Scripts(){
+export default function Scripts(site, comics){
     return `
-        <script src="/js/scripts.js"></script>
+        ${comics ? `<script> window.comics = ${JSON.stringify(comics)}; </script>`: ""}
+        ${site ? `<script> window.site = ${JSON.stringify(site)}; </script>` : ""} 
+        <script src="${site.url}/js/scripts.js"></script>
     `
 }

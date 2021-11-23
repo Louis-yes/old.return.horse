@@ -1,0 +1,22 @@
+{
+    "date" : "2021-11-08",
+    "title" : "Completely abolished",
+    "path" : "nocows",
+    "desc" : "It's important to take a strong stand",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01comic.png",
+                "alt" : "_default_panel_1",
+                "text" : "As a cowboy I have strong opinions about cows",
+                "hovertext" : "erase any and all memory of them"
+            },
+            {
+                "img" : "panel_02comic.png",
+                "alt" : "_default_panel_2",
+                "text" : "I do not think cows should exist",
+                "hovertext" : "erase any and all memory of them"
+            }
+        ]
+    }
+}
