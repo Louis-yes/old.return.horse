@@ -1,0 +1,22 @@
+{
+    "date" : "28-11-2021",
+    "title" : "Cerrando Ciclos",
+    "path" : "cerrandociclos",
+    "desc" : "There is a limit to growth",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01.png",
+                "alt" : "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+                "text" : "Every morning I wake up better and healthier",
+                "hovertext" : "what do I have to show for it"
+            },
+            {
+                "img" : "panel_02.png",
+                "alt" : "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+                "text" : "that cycle ends today",
+                "hovertext" : "what do I have to show for it"
+            }
+        ]
+    }
+}

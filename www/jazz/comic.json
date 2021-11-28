@@ -1,0 +1,22 @@
+{
+    "date" : "01-12-2021",
+    "title" : "toot toot",
+    "path" : "jazz",
+    "desc" : "Oh Joseph son of Jacob, what does it mean",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01.png",
+                "alt" : "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+                "text" : "I dreamt about jazz last night",
+                "hovertext" : "late night club of the subconcious"
+            },
+            {
+                "img" : "panel_02.png",
+                "alt" : "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+                "text" : "honk honk-honk honk-h-h-h honk tsh psh tsh psh ssss honk",
+                "hovertext" : "late night club of the subconcious"
+            }
+        ]
+    }
+}
