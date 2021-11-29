@@ -4,7 +4,8 @@ TODO
 [ ] make tool that works in ronin or somthing
 [ ] only build new comics
 [ ] deploy script - git subtree push --prefix www origin gh-pages
-
+[ ] fix comic data list to be sideloaded
+[ ] write correct description fro each panel
 */
 import fs from "fs-extra"
 import markdown from "markdown"
@@ -94,7 +95,9 @@ function  makeComicsList () {
                 return JSON.parse(fs.readFileSync(path, { encoding: "utf8" }))
             }
         }
-    }).filter(Boolean).sort((a,b) => { 
+    }).filter(Boolean).filter((a) => {
+        return new Date(a.date).getTime() < new Date().getTime()
+    }).sort((a,b) => { 
         return new Date(b.date).getTime() - new Date(a.date).getTime()
     })
     return comis
