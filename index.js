@@ -1,11 +1,16 @@
 /*
 TODO
+[ ] preload comic before hand
+[ ] first load animation
+
 [ ] write site meta
 [ ] make tool that works in ronin or somthing
+
 [ ] only build new comics
 [ ] deploy script - git subtree push --prefix www origin gh-pages
 [ ] fix comic data list to be sideloaded
 [ ] write correct description fro each panel
+
 */
 import fs from "fs-extra"
 import markdown from "markdown"
