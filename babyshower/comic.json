@@ -1,0 +1,23 @@
+{
+    "type" : "comic",
+    "date" : "2021-11-25",
+    "title" : "Nobody tells you",
+    "path" : "babyshower",
+    "desc" : "opaque and mysterious divinations",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01comic.png",
+                "alt" : "_defaut_panel_one",
+                "text" : "I've been invited to a baby shower. I'm intimidated.",
+                "hovertext" : "why challenge a cowboy like me"
+            },
+            {
+                "img" : "panel_02comic.png",
+                "alt" : "_default_panel_two",
+                "text" : "How the hell will I know which ones the baby",
+                "hovertext" : "why challenge a cowboy like me"
+            }
+        ]
+    }
+}
