@@ -1,0 +1,22 @@
+{
+    "date" : "2022-01-08",
+    "title" : "The fast and the frightened",
+    "path" : "knowyourlimits",
+    "desc" : "What else could you know",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01.png",
+                "alt" : "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+                "text" : "How fast can my horse go?",
+                "hovertext" : "fear is the mind killer"
+            },
+            {
+                "img" : "panel_02.png",
+                "alt" : "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+                "text" : "if I wasn't such a coward I could find out",
+                "hovertext" : "fear is the mind killer"
+            }
+        ]
+    }
+}
