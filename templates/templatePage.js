@@ -13,7 +13,8 @@ export default function templatePage(site, page, comics) {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
-        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+        <script src="${site.url}/js/swup.min.js"></script>  
+        <script src="${site.url}/js/SwupScrollPlugin.min.js"></script>
         ${meta({title: page.meta.title + " | " + site.title})}
         ${styles(site)}
     </head>

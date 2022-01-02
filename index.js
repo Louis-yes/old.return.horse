@@ -6,10 +6,10 @@ TODO
 [ ] write site meta
 [ ] make tool that works in ronin or somthing
 
-[ ] only build new comics
-[ ] deploy script - git subtree push --prefix www origin gh-pages
-[ ] fix comic data list to be sideloaded
-[ ] write correct description fro each panel
+[x] only build new comics
+[x] deploy script - git subtree push --prefix www origin www
+[x] fix comic data list to be sideloaded
+[x] write correct description fro each panel
 
 */
 import fs from "fs-extra"
@@ -38,7 +38,12 @@ function build(env){
     buildSitePages(site, pageTemplate, comics)
         // build archive
     buildArchivePage(site,comics, templateArchive)
-        // home page
+
+    // json data    
+    fs.writeFile(`${buildPath}/comics.json`, JSON.stringify(comics), () => { console.log(`created ${buildPath}/comics.json`) })
+    fs.writeFile(`${buildPath}/site.json`, JSON.stringify(site), () => { console.log(`created ${buildPath}/site.json`) })
+
+    // home page
     fs.writeFile(`${buildPath}/index.html`, comicTemplate(site, comics[0], comics), () => { console.log(`created ${buildPath}/index.html`) })
     // move assets over
         // js
@@ -90,7 +95,7 @@ function makePage(site, md, template, comics){
     return template(site, {meta: meta, content: content}, comics)
 }
 
-function  makeComicsList () {
+function makeComicsList () {
     const postsPath = './content/posts'
     const dir = fs.readdirSync(postsPath, { withFileTypes: true })
     const comis = dir.map(ff => {

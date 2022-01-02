@@ -10,12 +10,13 @@ export default function(site, comic, comics){
     <head>
         ${meta({title: comic.title + " | " + site.title})}
         ${styles(site)}
-        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+        <script src="${site.url}/js/swup.min.js"></script>  
+        <script src="${site.url}/js/SwupScrollPlugin.min.js"></script>
     </head>
     <body>
         ${comicDisplay(comic, comics, site)}
         ${navMenu(site)}
     </body>
-    ${Scripts(site, comics)}
+    ${Scripts(site)}
     </html>`
 }
