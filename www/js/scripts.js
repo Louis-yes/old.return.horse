@@ -1,5 +1,13 @@
+fetch("/comics.json")
+  .then(response => response.json())
+  .then(cc => {window.comics = cc})
+fetch("/site.json")
+  .then(response => response.json())
+  .then(ss => {window.site = ss})
+
 const options = {
-    containers: ["main"]
+    containers: ["main"],
+    plugins: [new SwupScrollPlugin()]
   };
 const swup = new Swup(options);
 
