@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "title": "return.horse",
     "description": "a thrice weekly, peaceful, cowboy themed webcomic",
@@ -6,3 +7,6 @@
     "devUrl" : "",
     "prodUrl": "https://www.return.horse"
 }
+=======
+{"title":"return.horse","description":"a thrice weekly, peaceful, cowboy themed webcomic","author":"Louis","colours":["#E43542","#111111"],"devUrl":"","prodUrl":"https://www.return.horse","url":"https://www.return.horse"}
+>>>>>>> 71fb36391d8c3d14c5be181cff4a00ee5f6c236e
