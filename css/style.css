@@ -15,8 +15,12 @@ body {
 
     line-height: 1.5;
 }
-.header { text-align: center; padding: 20px}
-.main { padding: 30px; width: 100%; }
+.header { text-align: center; padding: 30px 0 0; }
+.header img { width: 156px; }
+
+.comic-title { text-align: center; padding: 30px 0 0; font-style: italic; }
+
+.main { padding: 0 30px; width: 100%; }
 
 .page {
     margin: 0 auto;
@@ -54,14 +58,17 @@ blockquote {
 
 .comic-nav { 
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     display: flex; justify-content: space-between; 
     position: sticky; bottom: 0;
     padding: 20px 0;
     background: linear-gradient(#fff0, 20%, #fff);
 }
-.comic-nav svg { height: 20px; fill: var(--primary) }
+.comic-nav svg { height: 20px; fill: var(--primary); top: 5px; position: relative; }
+.comic-nav a { text-decoration: none; color: var(--primary);}
+.comic-nav a:visited { color: var(--primary);}
+
 .comic { margin: 20px auto; text-align: center; height: 700px;}
     .comic img { max-width: 260px; width: 100%;}
 .nav {text-align: center; display: flex; flex-direction: column; margin: 0 0 100px;} 
@@ -69,7 +76,7 @@ blockquote {
 
 @media screen and (min-width:700px){
     .comic {height: 364px;}
-    .comic-nav { top: -200px; position: relative; background: none; }
+    .comic-nav { top: -48px; position: relative; background: none; }
     .nav {text-align: center; flex-direction: row; justify-content: center;} 
 }
 
@@ -114,3 +121,4 @@ html.is-animating .transition-header {
 
 html.is-changing .comic-nav { pointer-events: none; }
 html.is-changing .comic-nav svg { fill: var(--disabled) }
+html.is-changing .comic-nav a { color: var(--disabled) }
