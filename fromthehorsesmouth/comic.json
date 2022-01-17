@@ -1,0 +1,22 @@
+{
+    "date" : "2022-01-16",
+    "title" : "In a deep voice",
+    "path" : "fromthehorsesmouth",
+    "desc" : "much to think about",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01.png",
+                "alt" : "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+                "text" : "My horse spoke to me last night. \" Without me, you're trapped, without you, I'm free\"",
+                "hovertext" : "hmmmmmmmm"
+            },
+            {
+                "img" : "panel_02.png",
+                "alt" : "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+                "text" : "hmm",
+                "hovertext" : "hmmmmmmmm"
+            }
+        ]
+    }
+}
