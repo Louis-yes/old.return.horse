@@ -1,0 +1,22 @@
+{
+    "date" : "2022-02-01",
+    "title" : "It's my thing",
+    "path" : "shapesandcolours",
+    "desc" : "Selectively sharpened senses",
+    "data" : {
+        "panels" : [
+            {
+                "img" : "panel_01.png",
+                "alt" : "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+                "text" : "I can't tell the difference between shapes and colours",
+                "hovertext" : "I can't tell the difference between right and wrong, yet"
+            },
+            {
+                "img" : "panel_02.png",
+                "alt" : "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+                "text" : "yet I recognise every cow I've ever met in my life",
+                "hovertext" : "I can't tell the difference between right and wrong, yet"
+            }
+        ]
+    }
+}

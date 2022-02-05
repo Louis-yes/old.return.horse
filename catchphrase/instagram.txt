@@ -1,0 +1,3 @@
+_defaut_panel_one. Text reads: "ringa ding ding"
+_default_panel_two. Text reads: "thats my new catchphrase"
+Panel 1 - _defaut_panel_one. Text reads: "ringa ding ding". Panel 2 - _default_panel_two. Text reads: "thats my new catchphrase"
