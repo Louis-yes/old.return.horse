@@ -5,12 +5,6 @@ fetch("/site.json")
   .then(response => response.json())
   .then(ss => {window.site = ss})
 
-const options = {
-    containers: ["main"],
-    plugins: [new SwupScrollPlugin()]
-  };
-const swup = new Swup(options);
-
 const rr = document.querySelector("#random")
 rr.addEventListener("mouseover", (e)=>{
   if(rr && window.comics && window.site){
