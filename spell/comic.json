@@ -1,0 +1,43 @@
+{
+	"date": "2022-03-18",
+	"title": "Is it with an H",
+	"path": "spell",
+	"desc": "H for happy",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "Horse",
+				"x": "302",
+				"y": "810",
+				"hovertext": ""
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "how do you \n spell that",
+				"x": "782",
+				"y": "810",
+				"hovertext": ""
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
