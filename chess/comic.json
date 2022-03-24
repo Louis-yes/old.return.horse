@@ -1,0 +1,43 @@
+{
+	"date": "2022-03-23",
+	"title": "Frames of reference",
+	"path": "chess",
+	"desc": "It's called the horse",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "What's that piece in chess \n that moves in an L shape",
+				"x": "302",
+				"y": "810",
+				"hovertext": "It's called the horse"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "The one that looks \n like a little cowboy",
+				"x": "782",
+				"y": "810",
+				"hovertext": "It's called the horse"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
