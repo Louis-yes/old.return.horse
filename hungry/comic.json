@@ -1,0 +1,43 @@
+{
+	"date": "2022-03-29",
+	"title": "I could eat a cowboy",
+	"path": "hungry",
+	"desc": "Some things we dont say, for the sake of our friends",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "I'm hungry",
+				"x": "302",
+				"y": "820",
+				"hovertext": "so hungry"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "I wish I had a handy cliche \n to explain how hungry I am",
+				"x": "782",
+				"y": "810",
+				"hovertext": "so hungry"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
