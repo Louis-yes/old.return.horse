@@ -1,0 +1,43 @@
+{
+	"date": "2022-04-11",
+	"title": "I lay down the law",
+	"path": "golf",
+	"desc": "Not too drastic",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "If I see even one \n golf ball in this desert \n its pistols at dawn",
+				"x": "302",
+				"y": "795",
+				"hovertext": "I promise"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "If I see a single golf ball \n I'm eating it",
+				"x": "782",
+				"y": "810",
+				"hovertext": "I promise"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
