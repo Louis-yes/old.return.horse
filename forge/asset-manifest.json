@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/forge/static/css/main.fb20e6b2.css",
-    "main.js": "/forge/static/js/main.e07a0b1c.js",
+    "main.js": "/forge/static/js/main.e21d6c82.js",
     "index.html": "/forge/index.html",
     "main.fb20e6b2.css.map": "/forge/static/css/main.fb20e6b2.css.map",
-    "main.e07a0b1c.js.map": "/forge/static/js/main.e07a0b1c.js.map"
+    "main.e21d6c82.js.map": "/forge/static/js/main.e21d6c82.js.map"
   },
   "entrypoints": [
     "static/css/main.fb20e6b2.css",
-    "static/js/main.e07a0b1c.js"
+    "static/js/main.e21d6c82.js"
   ]
 }
