@@ -1,0 +1,43 @@
+{
+	"date": "2022-04-15",
+	"title": "the horse knows the rules",
+	"path": "coach",
+	"desc": "the horse knows the rules",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "come on coach \n put me in",
+				"x": "302",
+				"y": "810",
+				"hovertext": "touchdown, your honour"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "the horse won't \n get in the way",
+				"x": "782",
+				"y": "810",
+				"hovertext": "touchdown, your honour"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
