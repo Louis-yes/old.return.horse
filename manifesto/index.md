@@ -9,10 +9,9 @@ A cowboy rides out in the morning on his horse, and returns in the evening. A fu
 
 ## why
 - I thought this would be funny
-- I like to draw but it takes me ages
-- I think the accumulation of daily rituals is interesting, and useful to observe
 - I think cowboys are cool
-- Overthinking simple premises feels like a well trod yet nonetheless fruitful comedic path
+- I'm trying to explore repetition
+- Daily rituals are important to observe
 
 ## shoulders of giants
 - [https://www.qwantz.com/](https://www.qwantz.com/ "Dinosaur Comics")
