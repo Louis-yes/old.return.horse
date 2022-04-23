@@ -1,0 +1,43 @@
+{
+	"date": "2022-04-23",
+	"title": "there is a cowboy yet to come",
+	"path": "rumours",
+	"desc": "Not the voice in the desert you expected",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "you will hear of cowboys, \n and rumours of cowboys",
+				"x": "302",
+				"y": "810",
+				"hovertext": "the rumours are redundant"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "don't panic",
+				"x": "782",
+				"y": "825",
+				"hovertext": "the rumours are redundant"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
