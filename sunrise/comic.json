@@ -1,0 +1,43 @@
+{
+	"date": "2022-05-19",
+	"title": "You can go your whole life and not know",
+	"path": "sunrise",
+	"desc": "I hope it does it again",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "I woke up early this morning \n and saw the sun rise",
+				"x": "302",
+				"y": "810",
+				"hovertext": "No one talks about it"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "I didn't realise \n it did that",
+				"x": "782",
+				"y": "810",
+				"hovertext": "No one talks about it"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
