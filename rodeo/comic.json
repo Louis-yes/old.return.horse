@@ -1,0 +1,43 @@
+{
+	"date": "2022-06-01",
+	"title": "with his mind",
+	"path": "rodeo",
+	"desc": "Like a rubix cube",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "last year's \n rodeo champion \n was insane",
+				"x": "302",
+				"y": "795",
+				"hovertext": "flip flop flap"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "hae rotated the bull \n through 4 axis",
+				"x": "782",
+				"y": "810",
+				"hovertext": "flip flop flap"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
