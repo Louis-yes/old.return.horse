@@ -1,0 +1,43 @@
+{
+	"date": "2022-06-07",
+	"title": "Everyday I say this in front of the mirror",
+	"path": "encouraging",
+	"desc": "I say it out of earshot of the horse",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "I am much smarter \n than a horse",
+				"x": "302",
+				"y": "810",
+				"hovertext": "may I never have to prove it"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "It's nice to start the day with \n  some encouraging words",
+				"x": "782",
+				"y": "810",
+				"hovertext": "may I never have to prove it"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}

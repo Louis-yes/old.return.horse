@@ -1,0 +1,43 @@
+{
+	"date": "2022-06-05",
+	"title": "Things are going extremely well",
+	"path": "horseproblems",
+	"desc": "This is what I mean by extended cognition",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "I bring my problems \n to the desert",
+				"x": "302",
+				"y": "810",
+				"hovertext": "tell your woes to the horse"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "I let the horse \n deal with them",
+				"x": "782",
+				"y": "810",
+				"hovertext": "tell your woes to the horse"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
