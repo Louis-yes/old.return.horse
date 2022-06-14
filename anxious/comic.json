@@ -1,0 +1,43 @@
+{
+	"date": "2022-06-14",
+	"title": "could be the horse",
+	"path": "anxious",
+	"desc": "Riding a horse under late capitalism",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "why do I feel \n so anxious",
+				"x": "302",
+				"y": "810",
+				"hovertext": "Ask David Graeber"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "all I do is ride a \n horse all day",
+				"x": "782",
+				"y": "810",
+				"hovertext": "Ask David Graeber"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
