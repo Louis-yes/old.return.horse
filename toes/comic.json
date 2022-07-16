@@ -1,0 +1,43 @@
+{
+	"date": "2022-07-14",
+	"title": "and they're mine",
+	"path": "toes",
+	"desc": "what did you expect",
+	"data": {
+		"panels": [
+			{
+				"img": "panel_01.png",
+				"alt": "A cowboy riding left to right, smoking. The sun is up and there are birds in the sky",
+				"text": "there's something \n in my boots",
+				"x": "302",
+				"y": "810",
+				"hovertext": "at least"
+			},
+			{
+				"img": "panel_02.png",
+				"alt": "A cowboy riding right to left, smoking. The moon is up and there are stars in the sky",
+				"text": "ten cowboy toes",
+				"x": "782",
+				"y": "825",
+				"hovertext": "at least"
+			}
+		]
+	},
+	"transforms": [
+		{
+			"x": 0,
+			"y": 0,
+			"font": "30px Helvetica"
+		},
+		{
+			"x": "245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		},
+		{
+			"x": "-245",
+			"y": "-30",
+			"font": "32px Helvetica"
+		}
+	]
+}
