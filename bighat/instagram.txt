@@ -1,3 +1,0 @@
-_panel_1_default. Text reads: "Big hat"
-_panel_2_default. Text reads: "Big hat, big brain"
-Panel 1 - _panel_1_default. Text reads: "Big hat". Panel 2 - _panel_2_default. Text reads: "Big hat, big brain"

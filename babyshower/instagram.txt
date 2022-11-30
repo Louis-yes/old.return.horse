@@ -1,3 +1,0 @@
-_defaut_panel_one. Text reads: "I've been invited to a baby shower. I'm intimidated."
-_default_panel_two. Text reads: "How the hell will I know which ones the baby"
-Panel 1 - _defaut_panel_one. Text reads: "I've been invited to a baby shower. I'm intimidated.". Panel 2 - _default_panel_two. Text reads: "How the hell will I know which ones the baby"

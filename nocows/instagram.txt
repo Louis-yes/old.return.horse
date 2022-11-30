@@ -1,3 +1,0 @@
-_default_panel_1. Text reads: "As a cowboy I have strong opinions about cows"
-_default_panel_2. Text reads: "I do not think cows should exist"
-Panel 1 - _default_panel_1. Text reads: "As a cowboy I have strong opinions about cows". Panel 2 - _default_panel_2. Text reads: "I do not think cows should exist"

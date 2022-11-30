@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>archive.horse</title>
+    
+        <meta name="description" content="all the return.horse comics ever written">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        
+    <main class="">
+        <section id="archive">
+            <nav>
+                <a href="/">..back to the desert</a>
+                <br>
+                <p>Pick your favourite and send it to your best friend:</p>
+            </nav>
+            <ol reversed>
+                {{range $c := .Comics}}
+                    <li><a href="/{{$c.Path}}">{{$c.Title}}</a></li>
+                {{end}}
+            </ol>
+        </section>
+    </main>
+            
+    </body> 
+    </html>

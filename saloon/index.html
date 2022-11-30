@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Saloon</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="">
+    <main class="saloon">
+        <section class="contents">
+            <nav>
+                <a href="..">.. back to the desert</a><br>
+                <a href="../archive ">Archive</a>
+                <details class="about">
+                    <summary>
+                        About   
+                    </summary>
+                    <p>
+                    <p>A cowboy rides out in the morning on his horse, and returns in the evening. A full day is done.
+                        What is he thinking about? What is going on? Who is he? We are only given snapshots. Every day
+                        he does it again.</p>
+
+                    <h2>why</h2>
+
+                    <ul>
+                        <li>I thought this would be funny</li>
+                        <li>I think cowboys are cool</li>
+                        <li>I'm trying to explore repetition</li>
+                        <li>Daily rituals are important to observe</li>
+                    </ul>
+
+                    <h2>shoulders of giants</h2>
+
+                    <ul>
+                        <li><a href="https://www.qwantz.com/" title="Dinosaur Comics">https://www.qwantz.com/</a></li>
+                        <li><a href="http://www.glenbaxter.com/"
+                                title="Glen Baxter's cowboy cartoons">http://www.glenbaxter.com/</a></li>
+                        <li><a href="https://www.thefarside.com/"
+                                title="Gary Larson, always">https://www.thefarside.com/</a></li>
+                        <li><a href="https://www.are.na/elizabeth-nelson/1-800-yee-honk"
+                                title="1800 Yee Honk - Are.na collection">https://www.are.na/elizabeth-nelson/1-800-yee-honk</a>
+                        </li>
+                        <li><a href="https://www.instagram.com/cowboy.irl/"
+                                title="cowboy.irl">https://www.instagram.com/cowboy.irl/</a></li>
+                        <li><a
+                                href="https://medium.com/@fchimero/hi-i-d-like-to-add-myself-to-the-new-yorker-3e25a63c2c3f">The</a>
+                            <a
+                                href="https://web.archive.org/web/20070210090211/http://modernarthur.com/blog/christwhatanasshole.html">Universal</a>
+                            <a href="https://www.newyorker.com/cartoons/bob-mankoff/the-universal-caption">Caption</a>
+                        </li>
+                    </ul>
+
+                    <blockquote>
+                        <p>"It is possible that God says every morning, “Do it again” to the sun; and every evening, “Do
+                            it again” to the moon. It may not be automatic necessity that makes all daisies alike; it
+                            may be that God makes every daisy separately, but has never got tired of making them."<br>-
+                            G.K. Chesterton, Orthodoxy</p>
+                    </blockquote>
+                    </p>
+                </details>
+            </nav>
+        </section>
+        <section class="journal">
+            <header>
+                <h1 class="marquee">~ cowboy journal</h1>
+            </header>
+            <article id="blocks"></article>
+            <span id="loading"></span>  
+        </section>
+    </main>
+    <script>
+            // this has mostly been taken from https://scoby.page/ source code
+            const path = "remind-horse";
+            const pretty_title = path.slice(1);
+            const head = document.getElementsByTagName('head');
+            const title = document.getElementById('title');
+            const blocks = document.getElementById('blocks');
+            const loadMoreBtn = document.createElement('button')
+            const loadingEl = document.getElementById('loading')
+            
+            let perPage = 48
+            let page = 0
+            let loading = false
+            let initialSetup = false
+
+            let CONTENT = []
+            
+            function init () {
+                document.title = pretty_title;
+                makeRequest()
+                loadMoreBtn.id = "load-more"
+                loadMoreBtn.addEventListener('click', () => {
+                    if (!loading) {
+                        makeRequest()
+                    }
+                })
+            }
+
+
+            function setupContent (data) {
+                data.reverse().map((item) => {
+                    var div = document.createElement("div");
+                    var date = document.createElement("date")
+                    date.innerHTML = item.created_at.split('T')[0]
+
+                    if (item.class == 'Text') {
+                        div.classList.add("text");
+                        div.innerHTML = `
+                                ${item.content_html}
+                            `;
+                    } else if (item.class == 'Link') {
+                        div.classList.add("link");
+                        div.innerHTML = `
+                                <a href="${item.source.url}">${item.source.url}</a>
+                            `;
+                    } else if (item.class == 'Image') {
+                        div.classList.add("image");
+                        div.innerHTML = `
+                                <figure><img src="${item.image.original.url}"/></figure>
+                                <caption>${item.content}</caption>
+                            `;
+                    } else if (item.class == 'Attachment') {
+                        if (item.attachment.content_type == 'video/mp4') {
+                            div.classList.add("video");
+                            div.innerHTML = `
+                                    <video controls>
+                                        <source src="${item.attachment.url}" type="video/mp4">
+                                    </video>
+                                `;
+                        }
+                    }
+                    blocks.appendChild(date);
+                    blocks.appendChild(div);
+                });
+            }
+
+            function conclude () {
+                // callback once there are no more blocks to add
+                // moved reverse function here once posts are loaded
+                endLoading()
+                loadMoreBtn.remove()
+            }
+
+            function startLoading () {
+                loading = true
+                loadMoreBtn.classList.remove('able-to-load')
+                loadingEl.classList.remove('done-loading')
+            }
+
+            function endLoading () {
+                window.scrollTo(0, window.scrollY + loadMoreBtn.offsetHeight)
+                loading = false
+                loadingEl.classList.add('done-loading')
+            }
+
+            function makeRequest () {
+                startLoading()
+                if (page === false) return false
+                
+                page++
+
+                fetch(`https://api.are.na/v2/channels/${path}/contents?page=${page}&per=${perPage}`)
+                    .then(response => response.json())
+                    .then(data => {
+
+                        const contents = data.contents;
+                        if (contents.length < perPage) {
+                            setupContent(contents)
+                            conclude()
+                            page = false
+                            return false
+                        } else {
+                            loadMoreBtn.remove()
+                            loadingEl.after(loadMoreBtn)
+                            loadMoreBtn.classList.add('able-to-load')
+                        }
+                        
+                        // keep appending to the content array
+                        // CONTENT = [...CONTENT, ...data]
+                        endLoading()
+                        setupContent(contents)
+                    })
+
+                    //2 do add error support
+                    .catch(error => console.error(error))
+            }
+
+            document.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
+
+</html>
