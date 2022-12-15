@@ -78,7 +78,6 @@
             const path = "remind-horse";
             const pretty_title = path.slice(1);
             const head = document.getElementsByTagName('head');
-            const title = document.getElementById('title');
             const blocks = document.getElementById('blocks');
             const loadMoreBtn = document.createElement('button')
             const loadingEl = document.getElementById('loading')
@@ -91,7 +90,6 @@
             let CONTENT = []
             
             function init () {
-                document.title = pretty_title;
                 makeRequest()
                 loadMoreBtn.id = "load-more"
                 loadMoreBtn.addEventListener('click', () => {
